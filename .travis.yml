@@ -6,6 +6,6 @@ node_js:
 services: 
     - docker
 before_install: 
-    - docker build -t LukeMa-Au/sample-app -f Dockerfile.dev .
+    - docker build -t lukema-au/sample-app -f Dockerfile.dev .
 script:     
-    - docker run -e CI=true LukeMa-Au/sample-app npm run test -- --coverage --watchAll=false
+    - docker run -e CI=true lukema-au/sample-app npm run test -- --coverage --watchAll=false
